@@ -1,5 +1,6 @@
 import os
 import cv2
+
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -59,7 +60,7 @@ def filter_dataframe(df: pd.DataFrame, max_height: float, max_width: float) -> p
     :return: filtered DataFrame
     """
     filter_df=df[(df["Height"] < max_height) & (df["Width"] < max_width)]
-    return filter_df[(df["Height"] < max_height) & (df["Width"] < max_width)]
+    return filter_df
 
 
 def add_image_area(df: pd.DataFrame) -> None:
@@ -69,7 +70,6 @@ def add_image_area(df: pd.DataFrame) -> None:
     :return: None
     """
     df["Area"] = df["Height"] * df["Width"]
-    return df["Area"]
 
 
 def sort_dataframe(df: pd.DataFrame) -> pd.DataFrame:
