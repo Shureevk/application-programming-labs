@@ -6,8 +6,8 @@ import pandas as pd
 
 def create_dataframe(annotation_file: str) -> pd.DataFrame:
     """
-    Creating a DataFrame
-    :param annotation_file: path to annotation file
+    Создание DataFrame
+    :param annotation_file: путь для файла аннотации
     :return: DataFrame
     """
     if not os.path.exists(annotation_file):
@@ -19,7 +19,7 @@ def create_dataframe(annotation_file: str) -> pd.DataFrame:
 
 def add_image_dimensions(df: pd.DataFrame) -> None:
     """
-    Add columns: height, width, depth
+    Добавление столбцов: длина, ширина, глубина
     :param df: Original DataFrame
     :return: None
     """
@@ -43,7 +43,7 @@ def add_image_dimensions(df: pd.DataFrame) -> None:
 
 def display_statistical(df: pd.DataFrame) -> None:
     """
-    Create statistic
+    Создание статистики
     :param df: DataFrame to statistic
     :return: Statistical information of columns: height, width, depth
     """
@@ -52,7 +52,7 @@ def display_statistical(df: pd.DataFrame) -> None:
 
 def filter_dataframe(df: pd.DataFrame, max_height: float, max_width: float) -> pd.DataFrame:
     """
-    Filtering DataFrame of max height and width
+    Фильрация DataFrame
     :param df: Origin DataFrame
     :param max_height: max height
     :param max_width: max width
@@ -64,7 +64,7 @@ def filter_dataframe(df: pd.DataFrame, max_height: float, max_width: float) -> p
 
 def add_image_area(df: pd.DataFrame) -> None:
     """
-    Add column area
+    Добавлние колонки площадь
     :param df: Origin DataFrame
     :return: None
     """
@@ -74,7 +74,7 @@ def add_image_area(df: pd.DataFrame) -> None:
 
 def sort_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Sorting DataFrame by areas
+    Сортировка DataFrame
     :param df: Origin DataFrame
     :return: Sorted DataFrame
     """
@@ -83,7 +83,7 @@ def sort_dataframe(df: pd.DataFrame) -> pd.DataFrame:
 
 def create_area_histogram(df: pd.DataFrame) -> None:
     """
-    Creating a hist of areas
+    Создание гистограммы
     :param df: DataFrame
     :return: None
     """
